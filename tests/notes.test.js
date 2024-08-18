@@ -37,6 +37,10 @@ test('should not get a note by id', async()=>{
     await request(app).get(`/api/notes/123`).send().expect(400)
 })
 
+test('should get a note by title', async()=>{
+    await request(app).get(`/api/notes?title=${note.title}`).send().expect(200)
+})
+
 test('should get all notes', async()=>{
     await request(app).get('/api/notes').send().expect(200)
 })

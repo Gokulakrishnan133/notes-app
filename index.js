@@ -3,10 +3,9 @@ const cors = require("cors");
 const noteRouter = require('./routes/noteRoute');
 const { default: mongoose } = require('mongoose');
 const app = express();
-// require('dotenv').config({path: './config/dev.env'});
 
 app.use(express.json());
-app.use(cors());
+app.use(cors());  
 
 const port = process.env.PORT || 5000;
 
